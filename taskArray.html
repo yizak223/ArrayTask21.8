@@ -6,6 +6,245 @@
     <title>Document</title>
 </head>
 <body>
-    <script></script>
+    <script>
+                //2
+                var arrayCountry=['israel','italia','usa','france','ukraine','china']
+                var vegtablesArray=['Carrot','Broccoli','Tomato','Spinach','Cauliflower','Bell Pepper']
+                var fruitsArray=['Apple','Banana','Orange','Grapes','Strawberry','Pineapple']
+                var carsArray=['Toyota','Ford','Honda','BMW','Mercedes-Benz','Chevrolet']
+                var kitchenItemsArray=['Cutting board','Knife set','Mixing bowls','Saucepan','Blender','Toaster']
+                console.log(arrayCountry[1]);
+                console.log(vegtablesArray[3]);
+                console.log(fruitsArray[5]);
+                console.log(kitchenItemsArray[5]);
+                arrayCountry[0]='Canada';
+                vegtablesArray[2]='Potato';
+                fruitsArray[2]='Mango';
+                carsArray[1]='volvo';
+                kitchenItemsArray[5]='fork';
+                function printCountries() {
+                    console.log(arrayCountry);    
+                }
+                function printCountriesLINE() {
+                    for(var i=0;i<=5;i++)
+                    {
+                        console.log(arrayCountry[i]); 
+                    }
+                }
+                printCountriesLINE()
+                //7
+                function changePARM(fruit) {
+                    fruitsArray.push(fruit)
+                }
+                //8
+                function ExsistArray(fruit) {
+                    var exsist=false
+                    for(var i=0;i<=5;i++){
+                        if(fruit==fruitsArray[i])
+                        {
+                            return true;
+                        }
+                    }
+                    return exsist;
+                }
+                ExsistArray('Apple')
+                //9
+              function checkEqualArray(someArray) {
+                if(someArray.length==kitchenItemsArray.length)
+                {
+                    return console.log('they equals');
+                }
+              }
+              //10
+              function checkNumBig(nun,country) {
+                if(num>5){
+                    arrayCountry.push(country);
+                }
+                else{
+                    arrayCountry.unshift(country);
+                }
+              }
+              //11
+              function addITEM(num,kitchenItem) {
+                if(num>kitchenItem.length){
+                    kitchenItem.push(item)
+                    console.log(kitchenItem);
+                }
+                else{
+                    console.log('the function didnt succeed');
+                }
+              }
+              //12
+              function CreateFunOfUserNUM(num) {
+                var someArray=[];
+                for(var i=0;i<num;i++){
+                    someArray[i]=i;
+                }
+              }
+              //13
+              function CreateFunOfUserNUM(num) {
+                var someArray=[];
+                for(var i=num;i>=0;i--){
+                    someArray[i]=0;
+                }
+              }
+              //14
+              function builtArrayfamilies() {
+                var familyArray=[]
+                for(var i=0;i<4;i++)
+                {
+                    familyArray[i]=prompt('enter family name')
+                }
+                return familyArray;
+              }
+              //15
+              function sdarotArray(num) {
+                var sdarotArray=[];
+                for(var i=0;i<num;i++)
+                {
+                     sdarotArray[i]=prompt('enter sidra')
+                }
+              }
+              //16
+              var arrayNum=[5,3,7,8,11];
+              console.log(arrayNum.length);
+              var sum=0;
+              for(var i=0;i<arrayNum.length;i++)
+              {
+                sum=sum+arrayNum[i];
+              }
+              var avg=sum/arrayNum.length;
+              console.log("Sum:", sum);
+              console.log("Average:", avg);
+            //17
+            var namesArray=['name1','name2','name3','name4','name5']
+            for(var i=0;i<namesArray.length;i++)
+            {
+                console.log(namesArray[i]);
+            }
+            //18
+            function CheckIfExsistNum(someArray,num) {
+                for(var i=0;i<someArray.length;i++)
+                {
+                    if(num==someArray[i])
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            function printIfZogi(someArray) {
+                var c=0;
+                for(var i=0;i<someArray.length;i++)
+                {
+                    if(someArray[i]%2==0)
+                    {
+                        c++
+                    }
+                }
+                return c;
+            }
+            printIfZogi(arrayNum)
+            //21
+            function TwoArraysCheckIfSame(someArray1,someArray2) {
+                var kli=0;
+                if(someArray1.length==someArray2.length)
+                {
+                    for(var i=0;i<someArray1.length;i++)
+                    {
+                        kli=someArray2[i];
+                        someArray2[i]=someArray1[i];
+                        someArray1[i]=kli;
+                    }
+                    return true;
+                }
+                return false;
+            }
+            //23
+            function LefiHagodel(arrayNum) {
+                for(var i=1;i<arrayNum;i++)
+                {
+                    if(arrayNum[i-1]<arrayNum[i])
+                    {
+                        arrayNum[0]=arrayNum[i];
+                    }
+                    if(arrayNum[i-1]>arrayNum[i])
+                    {
+                        arrayNum[arrayNum.length-1]=arrayNum[i];
+                    }
+                }
+                console.log(arrayNum);
+            }
+            //25
+            function ReturntheBigger(array) {
+                var max=array[0];
+                for(var i=1;i<array.length;i++){
+                    if(array[i]>max)
+                    {
+                    max=array[i];
+                    }
+                }    
+                return max;         
+            }
+            //26
+            ReturntheBigger([1,2,3,2,1,5,2,,1,10])
+            function ReturntheSmallest(array) {
+                var indexMin=0;
+                var min=array[0];
+                for(var i=1;i<array.length;i++){
+                    if(min>=array[i])
+                    {
+                        min=array[i];
+                        indexMin=i;
+                    }
+                }    
+                console.log(indexMin);
+                return indexMin;         
+            }
+            ReturntheSmallest([1,2,1,0,1,0])
+            //27
+            function sumOfArray(array) {
+                var sum=0;
+                for (var i = 0; i < array.length; i++) {
+                     sum = sum+ array[i];
+                }
+                return sum;
+            }
+            //28
+            function biggerKafolSmaller(array) {
+                min=array[0];
+                max=array[0];
+                for(var i=1;i<array.length;i++)
+                {
+                    if(array[i]>max)
+                    {
+                        max=array[i];
+                    }
+                    if(array[i]<min)
+                    {
+                        min=array[i];
+                    }
+                }
+                console.log(min*max);
+                return min*max;
+            }
+            biggerKafolSmaller([1,5,2,8,0])
+            //29
+            function IndexOfZogiBig(array) {
+                var Zogi=Number.MIN_VALUE;
+                var index
+              for(var i=0;i<array.length;i++)
+              {
+                if(array[i]%2==0 && array[i]>Zogi)
+                {
+                    Zogi=array[i];
+                    index=i;
+                }
+              }
+                console.log('the num: ',Zogi,'his index: ',index);
+            }
+            IndexOfZogiBig([10,1,,12,40,6,11,44])
+            //30
+    </script>
 </body>
 </html>
