@@ -192,13 +192,13 @@
                 var indexMin=0;
                 var min=array[0];
                 for(var i=1;i<array.length;i++){
-                    if(min>=array[i])
+                    if(array[i] < min)
                     {
                         min=array[i];
                         indexMin=i;
                     }
                 }    
-                console.log(indexMin);
+                console.log('Index of the smallest element:', indexMin);
                 return indexMin;         
             }
             ReturntheSmallest([1,2,1,0,1,0])
@@ -251,6 +251,7 @@
             }
             IndexOfZogiBig([10,1,,12,40,6,11,44])
             //30
+            
             //48
             var arrayNumWord=['hellow',2,4,'yes','no',23]
             console.log(arrayNumWord);
