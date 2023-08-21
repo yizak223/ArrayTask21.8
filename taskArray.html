@@ -232,7 +232,7 @@
             //29
             function IndexOfZogiBig(array) {
                 var Zogi=Number.MIN_VALUE;
-                var index
+                var index=-1;
               for(var i=0;i<array.length;i++)
               {
                 if(array[i]%2==0 && array[i]>Zogi)
@@ -241,7 +241,13 @@
                     index=i;
                 }
               }
-                console.log('the num: ',Zogi,'his index: ',index);
+              if (index !== -1) {
+                console.log('The largest even number:', Zogi, 'Index:', index);
+              } 
+              else 
+              {
+              console.log('No even number found in the array.');
+              }
             }
             IndexOfZogiBig([10,1,,12,40,6,11,44])
             //30
