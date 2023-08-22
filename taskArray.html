@@ -160,7 +160,7 @@
                 }
                 return false;
             }
-            //23
+            //23 24
             function LefiHagodel(arrayNum) {
                 for(var i=1;i<arrayNum;i++)
                 {
@@ -175,6 +175,8 @@
                 }
                 console.log(arrayNum);
             }
+            
+
             //25
             function ReturntheBigger(array) {
                 var max=array[0];
@@ -531,7 +533,28 @@
             }
             }
             //53
-
+            function bulitArraySmaller10() {
+                var usernumber;
+                var arrayNum=[];
+                do{
+                    usernumber=+prompt('num')
+                    if(isNaN(usernumber))
+                    {
+                        console.log("Invalid input. Please enter a valid number.");
+                    }
+                    else{
+                        if(usernumber>10)
+                        {
+                            console.log("Number is greater than ten. Stopping input.");
+                        }
+                        else{
+                            arrayNum.push(usernumber);
+                        }
+                    }
+                }while (usernumber <= 10);
+                console.log('the array',arrayNum);
+                return arrayNum;
+            }
     </script>
 </body>
 </html>
