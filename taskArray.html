@@ -84,8 +84,8 @@
               //13
               function CreateFunOfUserNUM(num) {
                 var someArray=[];
-                for(var i=num;i>=0;i--){
-                    someArray[i]=0;
+                for(var i=num-1;i>=0;i--){
+                    someArray[i]=i;
                 }
               }
               //14
@@ -251,7 +251,182 @@
             }
             IndexOfZogiBig([10,1,,12,40,6,11,44])
             //30
-            
+            function sumOfEIzogi(array) {
+                var sum=0;
+                for(var i=0;i<array.length;i++)
+                {
+                    if(array[i]%2==1)
+                    {
+                        sum=sum+array[i];
+                    }
+                }
+                console.log("the sum is:", sum);
+                return sum;   
+            }
+            //31
+            function addName(array,name) {
+                array.push(name)
+                return array
+            }
+            //32
+            function addMail(array,mail) {
+                array.unshift(mail);
+                return array
+            }
+            //33
+            function startZogiEndEiZogi(array,num) {
+                if(num%2==0)
+                {
+                    array.push(num)
+                }
+                else{
+                    array.unshift(num)
+                }
+                
+            }
+            //34
+            function isNumExsisit(array,num) {
+                for(var i=0;i<array.length;i++)
+                {
+                    if(array[i]=num)
+                    {
+                        array.pop(array[i])
+                        return array;
+                    }
+                }
+                array.push(num);
+                return array;
+            }
+            //35
+            function isNUMbigger(array,num) {
+                for(var i=0;i<array.length;i++)
+                {
+                    if(num<array[i])
+                    {
+                        array.unshift(num)
+                        return array;
+                    }
+                }
+                array.push(num)
+                return array;
+            }
+            //36
+            function minusNumFromArray(array,num) {
+                var hefresh=0;
+                if(num<array.length)
+                {
+                    hefresh=array.length-num;
+                }
+                if(hefresh>0)
+                {
+                    for(var i=array.length-1;i>=hefresh;i--)
+                    {
+                    array.pop(array[i])
+                    }
+                }
+                return array;
+            }
+            minusNumFromArray([1,2,3,4,5,6,7],6)
+            //37
+            function isBIGGER13orSMALLER(array) {
+                var sum=sumOfArray(array);
+                if(sum>=13)
+                {
+                    console.log('bar mitzva');
+                }
+                else if(sum==12)
+                {
+                    console.log('bat mitzva');
+                }
+                else{
+                    console.log('kid');
+                }
+            }
+            isBIGGER13orSMALLER([10,12])
+            //38
+            function printAsMuchAsInsert(age,name,family) {
+                if(age>18)
+                {
+                    for(var i=0;i<num;i++)
+                    {
+                        console.log('name: ',name,'family ',family);
+                    }
+                }
+                else{
+                    console.log('name: ',name,'family ',family);
+                }
+            }
+            //39
+            function printJS1000() {
+                for(var i=0;i<1000;i++)
+                {
+                    console.log('javascript is not JAVA');
+                }
+            }
+            //40
+            function printName(name,num) {
+                for(var i=0;i<num;i++)
+                {
+                    console.log(name);
+                }
+            }
+            //41
+            function printDetails(name,mail,age) {
+                console.log(name, mail, age);
+            }
+            //42
+            function printIfmYName(num) {
+                for(var i=0;i<num;i++)
+                {
+                    var name=prompt('enter name')
+                    if(name=='yizak')
+                    {
+                        console.log(name);
+                    }
+                }
+            }
+            //43
+            function IkafolJ() {
+                var num1=+prompt('num1')
+                var num2=+prompt('num2')
+                for(var i=1;i<=num1;i++)
+                {
+                    for(var j=1;j<=num2;j++)
+                    {
+                        console.log(j*i);
+                    }
+
+                }
+            }
+            //45
+            var arrayNmaes=['name1','name2','name3','name4','name5']
+            for(var i=0;i<5;i++){
+                console.log(arrayNmaes[i]);
+            }
+            //46
+            function getArrayUser() {
+                var namesArray=[];
+                for(var i=0;i<5;i++)
+                {
+                    namesArray[i]=prompt('name',i)
+                }
+            }
+            //47
+            function getEizogiFromYourArray() {
+                var numArray=[];
+                var numArrayEiZogi=[];
+                var c=0;
+                for(var i=0;i<7;i++)
+                {
+                    numArray[i]=+prompt('num')
+                    if(numArray[i]%2==1)
+                    {
+                        numArrayEiZogi[c]=numArray[i];
+                        c++
+                    }
+                }
+                console.log(numArrayEiZogi);
+            }
             //48
             var arrayNumWord=['hellow',2,4,'yes','no',23]
             console.log(arrayNumWord);
@@ -263,6 +438,85 @@
                 }
             }
             console.log(arrayNumWord);
+            //49
+            function builtZogiArray() {
+                var num1=+prompt('num')
+                var zogiArray=[]
+                for(var i=0;i<9;i++)
+                {
+                var num=Math.floor(Math.random()*100)
+                if(num%2==0)
+                {
+                    zogiArray[i]=num
+                }
+                else{
+                    zogiArray[i]=num+1;
+                }  
+                }
+                zogiArray.push(num1)
+                console.log(zogiArray);
+                return zogiArray
+            }
+            //50
+            function shetahHikefMalben() {
+                var width=+prompt('width')
+                var heigt=+prompt('heigt')
+                var shetah=width*heigt;
+                var Hikef=width*2+heigt*2;
+            }
+            //51
+            function whatOrder(){
+                var num1=+prompt('num1');
+                var num2=+prompt('num2');
+                var num3=+prompt('num3');
+
+                if(num1>num2 && num2>num3)
+                {
+                    console.log('סדר יורד');
+                }
+                else if(num1<num2 && num2<num3)
+                {
+                    console.log('סדר עולה');
+                }
+                else{
+                    console.log('אין סדר');
+                }
+                // var order=+prompt('enter num')
+                // var c=0
+                // for(var i=1;i<3;i++)
+                // {
+                //     var num=+prompt('enter num')
+                //     if(num>order){
+                //         order=num;
+                //         c++;
+                //     }       
+                //     else if(num<order)
+                //     {
+                //         order=num;
+                //         c--
+                //     }
+                // }
+                // if(c==2){
+                //     console.log('order');
+                // }
+                // else if(c==-2)
+                // {
+                //     console.log('order down');
+                // }
+                // else{
+                //     console.log('no order');
+                // }
+            }
+            //52
+            function printSfarot() {
+            var num =+prompt('number')
+            while (num>0) {
+                console.log(num%10); 
+                num=Math.floor(num/10)
+            }
+            }
+            //53
+            
     </script>
 </body>
 </html>
